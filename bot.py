@@ -68,11 +68,11 @@ class Chat:
         self.message_id = msg['message_id']
 
         self.messages = {
-            'start':'🤖 Hello, '+ self.user_name +'!\n\n'
-                    '📩 Send me:\n\n'
-                    '"*/music* _song name_"  or\n'
-                    '"*/music* _musician name - song name_"\n\n'
-                    'to order some music. 🎶',
+            'start':'🤖 Salam, '+ self.user_name +'!\n\n'
+                    '📩 Göndər:\n\n'
+                    '"*/music* _mahnı adı_"  or\n'
+                    '"*/music* _müğənni adı - mahnı adı_"\n\n'
+                    'Sahib: @ABISHOV_27. 🎶',
             
             'spotify_input_error':"‼️ *Oops! The bot doesn't support Spotify links!*\n"
                     'Try: "*/music* _song name_"\n'
@@ -126,7 +126,7 @@ class Chat:
             try:
                 self.send_audio(file_name)
                 self.delete_message(downloading_message)
-                self.send_message('✅ Sucess!')
+                self.send_message('✅ Yükləndi!')
                 print ("\nSucess!\n")
             except:
                 print("\nError")
