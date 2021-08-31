@@ -67,12 +67,12 @@ class Chat:
         self.user_name = msg['from']['first_name']
         self.message_id = msg['message_id']
 
-        self.messages = {
-            'start':'😍 Salam, '+ self.user_name +'!\n\n'
-                    '📩 Aşağıdakı kimi göndər:\n\n'
-                    '"*/music* _mahnı adı_"  və ya\n'
-                    '"*/music* _müğənni adı - mahnı adı_"\n\n'
-                    'Sahib: @ABISHOV_27. 🎶',
+        start_text = """
+Salam [{}](tg://user?id={}),
+Mən mahnı yükləmə botuyam 🤗
+Istədiyin mahnının adını aşağıdakı nümunədəki kimi mənə göndər.
+Nümunə: ```/music Sami Yusuf - Allahu Allah```
+"""
             
             'spotify_input_error':"‼️ *Oops! The bot doesn't support Spotify links!*\n"
                     'Try: "*/music* _song name_"\n'
