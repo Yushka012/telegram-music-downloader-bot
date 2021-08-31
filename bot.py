@@ -67,12 +67,12 @@ class Chat:
         self.user_name = msg['from']['first_name']
         self.message_id = msg['message_id']
 
-        start_text = """
-Salam [{}](tg://user?id={}),
-Mən mahnı yükləmə botuyam 🤗
-Istədiyin mahnının adını aşağıdakı nümunədəki kimi mənə göndər.
-Nümunə: ```/music Sami Yusuf - Allahu Allah```
-"""
+        self.messages = {
+            'start':'🤖 Salam, '+ self.user_name +'!\n\n'
+                    '📩 Send me:\n\n'
+                    '"*/music* _song name_"  or\n'
+                    '"*/music* _musician name - song name_"\n\n'
+                    'to order some music. 🎶',
             
             'spotify_input_error':"‼️ *Oops! The bot doesn't support Spotify links!*\n"
                     'Try: "*/music* _song name_"\n'
@@ -82,8 +82,8 @@ Nümunə: ```/music Sami Yusuf - Allahu Allah```
                     'Try: "*/music* _song name_"\n'
                     'or: "*/music* _musician name - song name_"',
 
-            'too_long':'‼️ *Dayan! Video çox uzundur!*\n'
-                    '30 dəqiqədən qısa mahnı seçin.'
+            'too_long':'‼️ *Oops! Video too long to convert!*\n'
+                    'Order something 30 minutes or less.'
 
 
         }
