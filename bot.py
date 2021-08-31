@@ -68,9 +68,9 @@ class Chat:
         self.message_id = msg['message_id']
 
         self.messages = {
-            'start':'🤖 Salam, '+ self.user_name +'!\n\n'
-                    '📩 Göndər:\n\n'
-                    '"*/music* _mahnı adı_"  or\n'
+            'start':'😍 Salam, '+ self.user_name +'!\n\n'
+                    '📩 Aşağıdakı kimi göndər:\n\n'
+                    '"*/music* _mahnı adı_"  və ya\n'
                     '"*/music* _müğənni adı - mahnı adı_"\n\n'
                     'Sahib: @ABISHOV_27. 🎶',
             
@@ -82,8 +82,8 @@ class Chat:
                     'Try: "*/music* _song name_"\n'
                     'or: "*/music* _musician name - song name_"',
 
-            'too_long':'‼️ *Oops! Video too long to convert!*\n'
-                    'Order something 30 minutes or less.'
+            'too_long':'‼️ *Dayan! Video çox uzundur!*\n'
+                    '30 dəqiqədən qısa mahnı seçin.'
 
 
         }
@@ -119,7 +119,7 @@ class Chat:
             file_name = file_name.replace('"', '')
 
             self.send_message(f"🎵 {Music.get_title(self, result)}\n🔗 {Music.get_link(self, result)}")
-            downloading_message = self.send_message('⬇️ Downloading... \n_(this may take a while.)_')
+            downloading_message = self.send_message('⬇️ Yüklənir... \n_(Biraz gözləyin.)_')
 
             Music.download_music(self, file_name, Music.get_link(self, result))
 
